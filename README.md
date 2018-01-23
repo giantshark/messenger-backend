@@ -13,7 +13,7 @@ $ npm install
 - If want more secure, add ssl to both front-end and back-end.
 
 ### Scalability
-- Not sure about scaling for socket.io if high connection. User socker provider like Pusher or Firebase should be better.
+- Not sure about scaling for socket.io if high connection. User socker provider like [Pusher](https://pusher.com/) or [Firebase](https://firebase.google.com/) should be better.
 
 ### Other
 - Api get messages should be add offset and limit params for pagination if user can see all chat history and for mobile also.
