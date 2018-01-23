@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+// Should be in .env file. In this case for easily to install(no need to create .env file) I just put here
 mongoose.connect('mongodb://dev001:dev001@ds111608.mlab.com:11608/web-messenger');
 
 var messages = require('./routes/messages');
