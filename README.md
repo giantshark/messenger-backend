@@ -20,4 +20,4 @@ $ npm install
 ### Other
 - Api get messages should be add offset and limit params for pagination if user can see all chat history and for mobile also.
 - Create .env file for mongo connection url string, username, and password.
-- MongoDB url string should be in .env file but .env file should be in github for easy to install that why I put full mongodb conection string in the code.
+- MongoDB url string should be in .env file but .env file should be in github for easy to install that why I put full mongodb connection string in the code.
