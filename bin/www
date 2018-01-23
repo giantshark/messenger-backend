@@ -7,9 +7,11 @@
 var app = require('../app');
 var debug = require('debug')('messenger-backend:server');
 var http = require('http');
-var Messenger = require('../libs/messenger')
+var Messenger = require('../libs/messenger');
+var Validator = require('../libs/validator');
 
 var messenger = new Messenger();
+var validator = new Validator();
 
 /**
  * Get port from environment and store in Express.
@@ -31,8 +33,10 @@ var io = require('socket.io')(server);
 
 io.on('connection', function (socket) {
   socket.on('web-messenger', function (data) {
-    messenger.create(data);
-    io.emit('web-messenger', data);
+    if (validator.isMessageValid(data)) {
+      messenger.create(data);
+      io.emit('web-messenger', data);
+    }
   });
 });
 
