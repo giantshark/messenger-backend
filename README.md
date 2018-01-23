@@ -11,6 +11,8 @@ $ npm install
 - CORS should allow only front-end ip address.
 - Prevent chat spaming should be added.
 - If want more secure, add ssl to both front-end and back-end.
+- Api default port should not be 3000. Use reverse proxy to api server to serve port 80 instead.
+- Rate limit of api should be added.
 
 ### Scalability
 - Not sure about scaling for socket.io if high connection. User socker provider like [Pusher](https://pusher.com/) or [Firebase](https://firebase.google.com/) should be better.
